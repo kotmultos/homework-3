@@ -17,6 +17,24 @@ public class Main {
                 System.out.print(item + " ");
             }
         }
+
+        workWithEnum();
+    }
+
+    private static void workWithEnum() {
+        DaysOfWeek day = DaysOfWeek.WED;
+
+        String resMessage = switch (day) {
+            case MON ->  "Monday";
+            case TUE -> "Tuesday";
+            case WED -> "Wednesday";
+            case THU -> "Thursday";
+            case FRI -> "Friday";
+            case SAT, SUN -> "Weekend";
+            default -> "Wrong day";
+        };
+
+        System.out.println("\n" + resMessage);
     }
 
     private static int[] getArr(int count, int min, int max) {
